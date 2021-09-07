@@ -24,6 +24,7 @@ public class LoggedIn {
                 //Display.initialDisplay();
                 break;
             }
+
         }
     }
 }
