@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-      //  Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Display.initialDisplay();
 
         try {
@@ -13,13 +13,18 @@ public class Main {
         } catch (InputMismatchException e) {
             System.out.println("boom");
             Display.correctNo();
-       //     scanner.close();
+           // scanner.close();
 
         }
-        Display.initialDisplay();
-        Scanner scanner2 = new Scanner(System.in);
-        Display.mainMenuChoice = scanner2.nextInt();
-        Display.initialChoice();
+            Display.initialDisplay();
+           // Scanner scanner2 = new Scanner(System.in);
+//            int boom = scanner.nextInt();
+//            System.out.println(boom + "boom");
+             Display.mainMenuChoice = scanner.nextInt();
+        System.out.println("mainMenuChoice" + Display.mainMenuChoice);
+        //TODO: how to make it display and run the initial choice again
+           // Display.initialChoice();
+
 
 
     }

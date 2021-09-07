@@ -50,8 +50,9 @@ public class Display {
                 correctNo();
                 Display.initialDisplay();
             }
+           // break;
 
-            scanner.close();
+            //scanner.close();
         }
     }
 
