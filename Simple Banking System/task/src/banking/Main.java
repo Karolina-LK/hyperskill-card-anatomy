@@ -1,27 +1,27 @@
 package banking;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+      //  Scanner scanner = new Scanner(System.in);
         Display.initialDisplay();
 
-        while (scanner.hasNext()) {
-            int mainMenuChoice = scanner.nextInt();
+        try {
+            Display.initialChoice();
+        } catch (InputMismatchException e) {
+            System.out.println("boom");
+            Display.correctNo();
+       //     scanner.close();
 
-            if (mainMenuChoice == 1) {
-                //create account
-                Display.initialDisplay();
-            } else if (mainMenuChoice == 2) {
-                LogIn.loggingIn();
-
-            } else if (mainMenuChoice == 0) {
-                Display.exit();
-                //Display.initialDisplay();
-                break;
-            }
         }
+        Display.initialDisplay();
+        Scanner scanner2 = new Scanner(System.in);
+        Display.mainMenuChoice = scanner2.nextInt();
+        Display.initialChoice();
+
+
     }
 
 
