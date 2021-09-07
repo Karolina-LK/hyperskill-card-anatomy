@@ -14,7 +14,6 @@ public class Main {
             System.out.println("boom");
             Display.correctNo();
            // scanner.close();
-
         }
             Display.initialDisplay();
            // Scanner scanner2 = new Scanner(System.in);
