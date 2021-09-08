@@ -21,6 +21,7 @@ public class Display {
 
     public static void exit() {
         System.out.println("Bye!");
+        System.exit(0);
     }
 
     public static void wrongNo() {
@@ -37,7 +38,7 @@ public class Display {
                 String input = scanner.nextLine();
                 mainMenuChoice = Integer.parseInt(input);
             } catch (NumberFormatException e) {
-                Display.correctNo();
+                //Display.correctNo();
             }
             if (mainMenuChoice == 1) {
                 //create account
@@ -46,9 +47,9 @@ public class Display {
                 LogIn.loggingIn();
             } else if (mainMenuChoice == 0) {
                 Display.exit();
-                break;
+
             } else {
-                //correctNo();
+                correctNo();
                 Display.initialDisplay();
             }
         }

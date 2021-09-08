@@ -20,8 +20,6 @@ public class LoggedIn {
             }
             if (loggedMenuChoice == 0) {
                 Display.exit();
-                System.exit(0);
-                break;
             }
 
         }
