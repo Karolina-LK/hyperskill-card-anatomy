@@ -9,10 +9,9 @@ public class LoggedIn {
         while (scanner.hasNext()) {
             int loggedMenuChoice = scanner.nextInt();
             if (loggedMenuChoice == 1) {
-                //verify balance for now
+                //verify balance, for now:
                 System.out.println("Balance = 0");
                 Display.loggedInDisplay();
-
             }
             if (loggedMenuChoice == 2) {
                 System.out.println("You have successfully logged out!");
@@ -21,7 +20,7 @@ public class LoggedIn {
             }
             if (loggedMenuChoice == 0) {
                 Display.exit();
-                //Display.initialDisplay();
+                System.exit(0);
                 break;
             }
 

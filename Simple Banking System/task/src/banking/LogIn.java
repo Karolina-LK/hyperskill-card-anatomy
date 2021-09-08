@@ -20,7 +20,7 @@ public class LogIn {
             }
             int pin = scanner.nextInt();
             String pinLength = String.valueOf(pin);
-            if(pinLength.length() == 4) {
+            if (pinLength.length() == 4) {
                 //validate, so far:
                 System.out.println("You have successfully logged in!");
                 Display.loggedInDisplay();

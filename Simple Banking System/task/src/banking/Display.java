@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Display {
     public static Scanner scanner = new Scanner(System.in);
-    public static int mainMenuChoice;
+    public static int mainMenuChoice = -1;
 
     public static void initialDisplay() {
         System.out.println("1. Create an account\n" +
@@ -28,33 +28,29 @@ public class Display {
     }
 
     public static void correctNo() {
-        System.out.println("Please choose the correct number, 2, 1 or 0");
+        System.out.println("Please type the correct number");
     }
 
     public static void initialChoice() {
-
         while (scanner.hasNext()) {
-            mainMenuChoice = scanner.nextInt();
-
+            try {
+                String input = scanner.nextLine();
+                mainMenuChoice = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                Display.correctNo();
+            }
             if (mainMenuChoice == 1) {
                 //create account
                 Display.initialDisplay();
             } else if (mainMenuChoice == 2) {
                 LogIn.loggingIn();
-
             } else if (mainMenuChoice == 0) {
                 Display.exit();
                 break;
-
             } else {
-                correctNo();
+                //correctNo();
                 Display.initialDisplay();
             }
-           // break;
-
-            //scanner.close();
         }
     }
-
-
 }
