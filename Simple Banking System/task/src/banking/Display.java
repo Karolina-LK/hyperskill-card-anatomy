@@ -41,7 +41,8 @@ public class Display {
                 //Display.correctNo();
             }
             if (mainMenuChoice == 1) {
-                //create account
+//                CreatingAccount.createCardNo();
+//                CreatingAccount.createPinNo();
                 Display.initialDisplay();
             } else if (mainMenuChoice == 2) {
                 LogIn.loggingIn();

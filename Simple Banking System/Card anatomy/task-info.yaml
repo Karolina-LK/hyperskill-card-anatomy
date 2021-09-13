@@ -254,6 +254,19 @@ files:
 - name: src/banking/LoggedIn.java
   visible: true
   learner_created: true
+- name: src/banking/ValidatingAccount.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/93/stages/515/implement#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: "Wrong answer in test #3\n\nThe user should not be signed in after entering\
+    \ incorrect card information.\n\nPlease find below the output of your program\
+    \ during this failed test.\nNote that the &#39;&gt;&#39; character indicates the\
+    \ beginning of the input line.\n\n---\n\n1. Create an account\n2. Log into account\n\
+    0. Exit\n&gt; 1\nYour card has been created\nYour card number:\n4000003520477555\n\
+    \ \n\nYour card PIN:\n0808\n\n1. Create an account\n2. Log into account\n0. Exit\n\
+    &gt; 2\nEnter your card number:\n&gt; 4000003520477555\nEnter your PIN:\n&gt;\
+    \ 4310\nYou have successfully logged in!\n1. Balance\n2. Log out\n0. Exit"
+  time: Fri, 10 Sep 2021 03:22:56 UTC
 record: -1
