@@ -9,19 +9,25 @@ public class LogIn {
         System.out.println("Enter your card number:");
 
         while (scanner.hasNext()) {
-            long cardNo = scanner.nextLong();
-            String cardNoLength = String.valueOf(cardNo);
-            if (cardNoLength.length() == 16) {
+            long putCardNo = scanner.nextLong();
+            String putCardNoLength = String.valueOf(putCardNo);
+            if (putCardNoLength.length() == 16) {
                 System.out.println("Enter your PIN:");
             } else {
                 Display.wrongNo();
                 Display.initialDisplay();
                 break;
             }
-            int pin = scanner.nextInt();
+            String pin = scanner.next();
             String pinLength = String.valueOf(pin);
             if (pinLength.length() == 4) {
                 //validate, so far:
+//                if(cardData.containsValue(cardNo)){
+//                    cardData.get(cardNo);
+//                }
+//                if(cardNo.equals(pin)){
+//                    System.out.println("boom");
+//                }
                 System.out.println("You have successfully logged in!");
                 Display.loggedInDisplay();
                 LoggedIn.process();

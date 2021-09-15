@@ -25,12 +25,12 @@ public class CreatingAccount {
         System.out.println(cardNo);
 
         int[] pinNoDigit = new int[4];
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
             pinNoDigit[i] = random.nextInt(9);
         }
 
         StringBuilder builder2 = new StringBuilder();
-        for(int digit : pinNoDigit){
+        for (int digit : pinNoDigit) {
             builder2.append(digit);
         }
         String pinNo = builder2.toString();
@@ -40,7 +40,9 @@ public class CreatingAccount {
         HashMap<String, String> cardData = new HashMap<>();
         cardData.put(cardNo, pinNo);
         System.out.println(cardData);
+
 //        return  String.valueOf(accountInfo);
+
         return " " + "\n";
 
     }
