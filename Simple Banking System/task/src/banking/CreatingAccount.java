@@ -11,17 +11,16 @@ public class CreatingAccount {
 
     public static String createCardData() {
 
-        System.out.println("Your card has been created" + "\n" + "Your card number:");
+        System.out.println("\n" + "Your card has been created" + "\n" + "Your card number:");
         int[] cardNoMidPart = new int[10];
         for (int i = 0; i < 10; i++) {
             cardNoMidPart[i] = random.nextInt(9);
         }
 
-        StringBuilder builder = new StringBuilder();
+        StringBuilder cardNo = new StringBuilder("400000");
         for (int value : cardNoMidPart) {
-            builder.append(value);
+            cardNo.append(value);
         }
-        String cardNo = 400000 + builder.toString();
         System.out.println(cardNo);
 
         int[] pinNoDigit = new int[4];
@@ -29,20 +28,14 @@ public class CreatingAccount {
             pinNoDigit[i] = random.nextInt(9);
         }
 
-        StringBuilder builder2 = new StringBuilder();
+        StringBuilder pinNo = new StringBuilder();
         for (int digit : pinNoDigit) {
-            builder2.append(digit);
+            pinNo.append(digit);
         }
-        String pinNo = builder2.toString();
         System.out.println("Your card PIN:" + "\n" + pinNo);
+        System.out.println();
 
-
-        HashMap<String, String> cardData = new HashMap<>();
-        cardData.put(cardNo, pinNo);
-        System.out.println(cardData);
-
-//        return  String.valueOf(accountInfo);
-
+        ValidatingAccount.addAccount(cardNo.toString(), pinNo.toString());
         return " " + "\n";
 
     }

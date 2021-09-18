@@ -10,18 +10,17 @@ public class LoggedIn {
             int loggedMenuChoice = scanner.nextInt();
             if (loggedMenuChoice == 1) {
                 //verify balance, for now:
-                System.out.println("Balance = 0");
+                System.out.println("Balance = 0" + "\n");
                 Display.loggedInDisplay();
             }
             if (loggedMenuChoice == 2) {
-                System.out.println("You have successfully logged out!");
+                System.out.println("You have successfully logged out!" + "\n");
                 Display.initialDisplay();
                 break;
             }
             if (loggedMenuChoice == 0) {
                 Display.exit();
             }
-
         }
     }
 }

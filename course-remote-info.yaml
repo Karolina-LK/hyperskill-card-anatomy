@@ -3,11 +3,11 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/295560/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Wed, 15 Sep 2021 02:45:50 UTC
+update_date: Sat, 18 Sep 2021 05:27:56 UTC
 stages:
 - id: 515
   step: 8425
-  is_completed: false
+  is_completed: true
 - id: 516
   step: 8426
   is_completed: false
@@ -111,6 +111,8 @@ topics:
     theory_id: 9746
   - title: Errors in programs
     theory_id: 3536
+  - title: Package
+    theory_id: 3621
   - title: What is an exception
     theory_id: 3497
   - title: Hierarchy of exceptions
@@ -127,16 +129,14 @@ topics:
     theory_id: 3535
   - title: Instance methods
     theory_id: 3495
-  - title: Package
-    theory_id: 3621
+  - title: Objects
+    theory_id: 4727
   - title: Access modifiers
     theory_id: 3589
   - title: Getters and setters
     theory_id: 3599
   - title: Inheritance
     theory_id: 3583
-  - title: Objects
-    theory_id: 4727
   1:
   - title: Command-line arguments
     theory_id: 3566
@@ -167,12 +167,10 @@ topics:
     theory_id: 7123
   - title: Literals
     theory_id: 7400
-  - title: Expressions
-    theory_id: 7409
-  - title: Basic SELECT statement
-    theory_id: 7392
   - title: The NULL value
     theory_id: 7907
+  - title: Basic SELECT statement
+    theory_id: 7392
   - title: SELECT FROM statement
     theory_id: 8611
   - title: SELECT FROM WHERE statement
@@ -189,6 +187,8 @@ topics:
     theory_id: 9519
   - title: JDBC Statements
     theory_id: 9955
+  - title: Expressions
+    theory_id: 7409
   3:
   - title: Results ordering
     theory_id: 8627

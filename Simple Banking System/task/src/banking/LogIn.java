@@ -6,7 +6,7 @@ public class LogIn {
     static Scanner scanner = new Scanner(System.in);
 
     static public void loggingIn() {
-        System.out.println("Enter your card number:");
+        System.out.println("\n" + "Enter your card number:");
 
         while (scanner.hasNext()) {
             long putCardNo = scanner.nextLong();
@@ -19,16 +19,8 @@ public class LogIn {
                 break;
             }
             String pin = scanner.next();
-            String pinLength = String.valueOf(pin);
-            if (pinLength.length() == 4) {
-                //validate, so far:
-//                if(cardData.containsValue(cardNo)){
-//                    cardData.get(cardNo);
-//                }
-//                if(cardNo.equals(pin)){
-//                    System.out.println("boom");
-//                }
-                System.out.println("You have successfully logged in!");
+            if (ValidatingAccount.checkAccount(String.valueOf(putCardNo), pin)) {
+                System.out.println("\n"+ "You have successfully logged in!" + "\n");
                 Display.loggedInDisplay();
                 LoggedIn.process();
             } else {
