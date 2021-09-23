@@ -20,12 +20,12 @@ public class Display {
     }
 
     public static void exit() {
-        System.out.println("Bye!");
+        System.out.println("\n" + "Bye!");
         System.exit(0);
     }
 
     public static void wrongNo() {
-        System.out.println("Wrong card number or PIN!");
+        System.out.println("\n" + "Wrong card number or PIN!" + "\n");
     }
 
     public static void correctNo() {
@@ -37,19 +37,20 @@ public class Display {
             try {
                 String input = scanner.nextLine();
                 mainMenuChoice = Integer.parseInt(input);
-            } catch (NumberFormatException e) {
-                //Display.correctNo();
-            }
-            if (mainMenuChoice == 1) {
-                //create account
-                Display.initialDisplay();
-            } else if (mainMenuChoice == 2) {
-                LogIn.loggingIn();
-            } else if (mainMenuChoice == 0) {
-                Display.exit();
 
-            } else {
-                correctNo();
+                if (mainMenuChoice == 1) {
+                    CreatingAccount.createCardData();
+                    Display.initialDisplay();
+                } else if (mainMenuChoice == 2) {
+                    LogIn.loggingIn();
+                } else if (mainMenuChoice == 0) {
+                    Display.exit();
+                } else {
+                    correctNo();
+                    Display.initialDisplay();
+                }
+            } catch (NumberFormatException e) {
+                Display.correctNo();
                 Display.initialDisplay();
             }
         }

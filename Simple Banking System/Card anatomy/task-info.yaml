@@ -254,6 +254,12 @@ files:
 - name: src/banking/LoggedIn.java
   visible: true
   learner_created: true
+- name: src/banking/ValidatingAccount.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/93/stages/515/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 18 Sep 2021 06:46:36 UTC
 record: -1
